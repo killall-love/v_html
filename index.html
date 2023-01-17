@@ -37,8 +37,9 @@
 </body>
 
 <script>
-  var url = getQueryString("url") + ""
-  if (url.indexOf('ppxvod.com') != -1 || url.indexOf('douyinvod.com') != -1) {
+  var url = getQueryString("url")
+  // if (url.indexOf('ppxvod.com') != -1 || url.indexOf('douyinvod.com') != -1) {
+  if (url != null) {
     document.getElementById('source').src = url
   } else {
     document.getElementById('res').innerHTML = 'URL异常'
