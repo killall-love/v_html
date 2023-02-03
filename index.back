@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name=referrer content=no-referrer>
+
+<head>
+  <meta charset="UTF-8">
+  <title>皮皮虾抖音播放</title>
+</head>
+<style>
+  .mod-video-ele {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+  }
+</style>
+
+<body>
+  <div>
+    <video id="video" autoplay="autoplay" class="mod-video-ele" controls="controls" playsinline webkit-playsinline
+      x5-playsinline>
+      <source id="source" type="video/mp4">
+      您的浏览器不支持最新的video播放
+    </video>
+  </div>
+  <H1 style="text-align: center;" id="res"></H1>
+</body>
+
+<script>
+
+  var url = getQueryString("url")
+  if (url != null && (url.indexOf('ppxvod.com') != -1 || url.indexOf('douyinvod.com') != -1)) {
+    document.getElementById('source').src = url
+  } else {
+    document.getElementById("video").remove()
+    document.getElementById('res').innerHTML = 'URL异常'
+  }
+  function getQueryString(name) { var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); var r = window.location.search.substr(1).match(reg); if (r != null) return decodeURI(r[2]); return null; }
+
+</script>
+
+</html>
