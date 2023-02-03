@@ -34,6 +34,7 @@
   if (url != null && (url.indexOf('ppxvod.com') != -1 || url.indexOf('douyinvod.com') != -1)) {
     document.getElementById('source').src = url
   } else {
+    document.getElementById("video").remove()
     document.getElementById('res').innerHTML = 'URL异常'
   }
   function getQueryString(name) { var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); var r = window.location.search.substr(1).match(reg); if (r != null) return decodeURI(r[2]); return null; }
