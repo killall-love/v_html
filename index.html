@@ -34,9 +34,6 @@
   var url = getQueryString("url")
   if (url != null && (url.indexOf('ppxvod.com') != -1 || url.indexOf('douyinvod.com') != -1) || url.indexOf('snssdk.com') != -1)) {
     document.getElementById('source').src = url
-    document.getElementById('video').addEventListener("loadedmetadata", function() {
-       this.play(); 
-    });
   } else {
     document.getElementById("video").remove()
     document.getElementById('res').innerHTML = 'URL异常'
